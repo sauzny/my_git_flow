@@ -1,0 +1,44 @@
+[tree,file=""]
+--
+#src
+##main
+###java
+####com
+#####kodcu
+######App.java
+###resources
+####css
+#####style.css
+####js
+#####script.js
+####images
+#####image.png
+--
+
+
+
+[tree,file=""]
+--
+root
+|-- photos
+|   |-- camp.gif
+|   |-- festival.png
+|   `-- balloon.jpg
+|-- videos
+|   |-- car-video.avi
+|   |-- dance.mp4
+|   |-- dance01.mpg
+|   |-- another video.divx
+|   `-- school videos
+|       `-- firstday.flv
+|-- documents
+|   |-- javafile.java
+|   |-- jsfile.js
+|   |-- powerpoint.ppt
+|   |-- chapter-01.asc
+|   |-- archive-db.zip
+|   |-- .gitignore
+|   |-- README
+|   `-- configuration.conf
+`-- etc.
+--

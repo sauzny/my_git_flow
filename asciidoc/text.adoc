@@ -1,0 +1,56 @@
+
+TIP: Pro tip...提示
+
+IMPORTANT: Don't forget...重要
+
+WARNING: Watch out for...警告
+
+CAUTION: Ensure that...危险
+
+NOTE: 信息
+
+[source,]
+----
+// 源代码
+public class App {
+	public static void main(String[] args) {
+	    System.out.println("Hello world");
+	}
+}
+----
+
+====
+文字块
+====
+
+
+[quote,sauzny]
+____
+这是一个引用块
+____
+
+. a
+. b
+. c
+
+---
+
+* a
+** 1
+** 2
+* b
+* c
+
+
+= 1
+
+== 1
+
+=== 1
+
+==== 1
+
+===== 1
+
+====== 1
+
