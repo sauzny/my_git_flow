@@ -1,9 +1,11 @@
 
 [width="100%",options="header,footer"]
+[caption="Table A. "]
+.A formal table
 |====================
-| 表头 | 表头 | 表头
-| Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
-| Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
+| 表头 | 表头 | 表头 
+| Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1 
+| Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2 
 |====================
 
 === 水平控制
@@ -15,6 +17,7 @@
 [cols="3*^"]
 |====================
 | 表头 | 表头 | 表头
+
 | Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
 | Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
 |====================
@@ -23,6 +26,7 @@
 [cols="<,^,>"]
 |====================
 | 表头 | 表头 | 表头
+
 | Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
 | Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
 |====================
@@ -49,6 +53,7 @@
 [cols="40,30,30"]
 |====================
 | 表头 | 表头 | 表头
+
 | Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
 | Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
 |====================
@@ -190,3 +195,63 @@ wonders of tables in an
 epic sonnet.
 
 |===
+
+==== table插入table
+[cols="1,2a"]
+|===
+| Col 1 | Col 2
+
+| Cell 1.1
+| Cell 1.2
+
+| Cell 2.1
+| Cell 2.2
+
+[cols="2,1"]
+!===
+! Col1 ! Col2
+
+! C11
+! C12
+
+!===
+
+|===
+
+==== CSV DSV 自定义分隔符
+
+[%header,format=csv]
+|===
+Artist,Track,Genre
+Baauer,Harlem Shake,Hip Hop
+The Lumineers,Ho Hey,Folk Rock
+|===
+
+[%header,format=csv]
+|===
+include::tracks.csv[]
+|===
+
+[%header,format=dsv]
+|===
+Artist:Track:Genre
+Robyn:Indestructable:Dance
+The Piano Guys:Code Name Vivaldi:Classical
+|===
+
+[format=dsv,separator=;]
+|===
+a;b;c
+d;e;f
+|===
+
+,===
+Artist,Track,Genre
+Baauer,Harlem Shake,Hip Hop
+,===
+
+:===
+Artist:Track:Genre
+Robyn:Indestructable:Dance
+:===
+
