@@ -1,8 +1,133 @@
 
-[width="100%",options="header,footer"]
 |====================
 | 表头 | 表头 | 表头
 | Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
 | Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
 |====================
 
+=== 水平控制
+
+* ^ 居中
+* < 居左
+* > 居右
+
+[cols="3*^"]
+|====================
+| 表头 | 表头 | 表头
+| Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
+| Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
+|====================
+
+
+[cols="<,^,>"]
+|====================
+| 表头 | 表头 | 表头
+| Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
+| Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
+|====================
+
+=== 垂直控制
+
+* top (.<)
+* middle (.^)
+* bottom (.>)
+
+[cols=".<,.^,^.>"]
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|===
+
+=== 控制列宽
+
+[cols="40,30,30"]
+|====================
+| 表头 | 表头 | 表头
+| Cell in column 1, row 1 | Cell in column 2, row 1 | Cell in column 3, row 1
+| Cell in column 1, row 2 | Cell in column 2, row 2 | Cell in column 3, row 2
+|====================
+
+=== 水平，垂直，列宽
+
+[cols=".<2,.^5,^.>3"]
+|===
+|Cell in column 1, row 1 with lots and lots and lots and lots of content
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2 and another bucket of content, and then a jelly roll of content
+|===
+
+=== 字体控制
+
+[cols="h,m,s,e"]
+|===
+|Cell in column 1, row 1
+|Cell in column 2, row 1
+|Cell in column 3, row 1
+|Cell in column 4, row 1
+
+|Cell in column 1, row 2
+|Cell in column 2, row 2
+|Cell in column 3, row 2
+|Cell in column 4, row 2
+|===
+
+=== 单元格
+
+==== 复制
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+3*|Same cell content in columns 1, 2, and 3
+|Cell in column 1, row 3 |Cell in column 2, row 3 |Cell in column 3, row 3
+|===
+
+==== 行合并
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+3+|Content in a single cell that spans columns 1, 2, and 3
+|Cell in column 1, row 3 |Cell in column 2, row 3 |Cell in column 3, row 3
+|===
+
+==== 列合并
+|===
+|Cell in column 1, row 1 |Cell in column 2, row 1 |Cell in column 3, row 1
+.2+|Content in a single cell that spans rows 2 and 3
+|Cell in column 2, row 2|Cell in column 3, row 2
+|Cell in column 2, row 3|Cell in column 3, row 3
+|===
+
+==== 行列合并
+|===
+|Column 1, row 1 |Column 2, row 1 |Column 3, row 1 |Column 4, row 1
+
+|Column 1, row 2
+2.3+|Content in a single cell that spans over rows and columns
+|Column 4, row 2
+
+|Column 1, row 3 |Column 4, row 3
+|Column 1, row 4 |Column 4, row 4
+|===
+
+==== 控制每个单元格
+IMPORTANT: 这里使用了转义字符
+[cols="3"]
+|===
+^|Prefix the `{vbar}` with `{caret}` to center content horizontally
+<|Prefix the `{vbar}` with `<` to align the content to the left horizontally
+>|Prefix the `{vbar}` with `>` to align the content to the right horizontally
+
+.^|Prefix the `{vbar}` with a `.` and `{caret}` to center the content in the cell vertically
+.<|Prefix the `{vbar}` with a `.` and `<` to align the content to the top of the cell
+.>|Prefix the `{vbar}` with a `.` and `>` to align the content to the bottom of the cell
+
+3+^.^|This content spans three columns (`3{plus}`) and is centered horizontally (`{caret}`) and vertically (`.{caret}`) within the cell.
+
+|===
